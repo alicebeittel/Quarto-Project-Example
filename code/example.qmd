@@ -1,0 +1,55 @@
+---
+title: "Quarto Workshop - My first quarto document"
+author: "Alice Beittel"
+format: 
+  html:
+      output-file: 'quarto_workshop_ex1_htmlfile'
+  pdf: 
+    output-file: 'quarto_workshop_ex1_pdffile'
+editor: visual
+subtitle: 'Working with a quarto document'
+---
+
+# First level header
+
+## Second level header
+
+### Third level header
+
+Quarto enables you to weave together content and executable code into a finished document.
+
+I can create [links](https://github.com "GitHub").
+
+I can make things *italic*.
+
+I can make things **bold**.
+
+I can make things ***bold and italic***.
+
+I can make chunks of code
+
+``` r
+echo: false
+2+2 = 4
+```
+
+I can also make {{< code >}} in a sentence.
+
+U-ordered List - list item 1 - list item 2
+
+-   list item 1
+-   list item 2
+
+Ordered List:
+
+1.  list item 1
+
+2.  list item 2
+
+Make a table
+
+| Col1         | Col2 | Col3 |
+|--------------|------|------|
+| yay a table! |      |      |
+|              |      |      |
+|              |      |      |
