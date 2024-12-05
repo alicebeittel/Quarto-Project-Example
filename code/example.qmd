@@ -8,6 +8,7 @@ format:
     output-file: 'quarto_workshop_ex1_pdffile'
 editor: visual
 subtitle: 'Working with a quarto document'
+bibliography: references.bib
 ---
 
 # First level header
@@ -53,3 +54,20 @@ Make a table
 | yay a table! |      |      |
 |              |      |      |
 |              |      |      |
+
+Practice with citations:
+
+This is a reference to [@kirschbaum2007]. This is a reference to [@nitsch2020].
+
+This is an example of a citation in quarto @kirschbaum2007; @nitsch2020.
+
+@nitsch2020
+
+csl: 'report/apa.csl'
+
+this is an in-text citation from @kirschbaum2007.
+
+This is an example to @fig-condition.
+
+::: references
+:::

@@ -21,7 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="example_files/libs/clipboard/clipboard.min.js"></script>
@@ -71,9 +125,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="first-level-header" class="level1">
+<h1>First level header</h1>
+<section id="second-level-header" class="level2">
+<h2 class="anchored" data-anchor-id="second-level-header">Second level header</h2>
+<section id="third-level-header" class="level3">
+<h3 class="anchored" data-anchor-id="third-level-header">Third level header</h3>
+<p>Quarto enables you to weave together content and executable code into a finished document.</p>
+<p>I can create <a href="https://github.com" title="GitHub">links</a>.</p>
+<p>I can make things <em>italic</em>.</p>
+<p>I can make things <strong>bold</strong>.</p>
+<p>I can make things <strong><em>bold and italic</em></strong>.</p>
+<p>I can make chunks of code</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>echo<span class="sc">:</span> false</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span> <span class="ot">=</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I can also make {{&lt; code  &gt;}} in a sentence.</p>
+<p>U-ordered List - list item 1 - list item 2</p>
+<ul>
+<li>list item 1</li>
+<li>list item 2</li>
+</ul>
+<p>Ordered List:</p>
+<ol type="1">
+<li><p>list item 1</p></li>
+<li><p>list item 2</p></li>
+</ol>
+<p>Make a table</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Col1</th>
+<th>Col2</th>
+<th>Col3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>yay a table!</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Practice with citations:</p>
+<p>This is a reference to <span class="citation" data-cites="kirschbaum2007">(<a href="#ref-kirschbaum2007" role="doc-biblioref">Kirschbaum and Hellhammer 2007</a>)</span>. This is a reference to <span class="citation" data-cites="nitsch2020">(<a href="#ref-nitsch2020" role="doc-biblioref">Nitsch and Kalenscher 2020</a>)</span>.</p>
+<p>This is an example of a citation in quarto <span class="citation" data-cites="kirschbaum2007">Kirschbaum and Hellhammer (<a href="#ref-kirschbaum2007" role="doc-biblioref">2007</a>)</span>; <span class="citation" data-cites="nitsch2020">Nitsch and Kalenscher (<a href="#ref-nitsch2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p><span class="citation" data-cites="nitsch2020">Nitsch and Kalenscher (<a href="#ref-nitsch2020" role="doc-biblioref">2020</a>)</span></p>
+<p>csl: ‘report/apa.csl’</p>
+<p>this is an in-text citation from <span class="citation" data-cites="kirschbaum2007">Kirschbaum and Hellhammer (<a href="#ref-kirschbaum2007" role="doc-biblioref">2007</a>)</span>.</p>
+<p>This is an example to <strong>?@fig-condition</strong>.</p>
+<div class="references">
 
+</div>
 
-</main>
+</section>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kirschbaum2007" class="csl-entry" role="listitem">
+Kirschbaum, C., and D. H. Hellhammer. 2007. <span>“Salivary Cortisol.”</span> In, 405–9. Elsevier. <a href="https://doi.org/10.1016/b978-012373947-6.00334-2">https://doi.org/10.1016/b978-012373947-6.00334-2</a>.
+</div>
+<div id="ref-nitsch2020" class="csl-entry" role="listitem">
+Nitsch, Felix Jan, and Tobias Kalenscher. 2020. <span>“Keeping a Cool Head at All Times. What Determines Choice Consistency?”</span> <a href="http://dx.doi.org/10.31234/osf.io/etyhx">http://dx.doi.org/10.31234/osf.io/etyhx</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

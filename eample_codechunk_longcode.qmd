@@ -1,6 +1,6 @@
 ---
-title: "Quarto Code Chunk Practice - Session 2"
-author: "Alice Beittel"
+title: "More Code Chunk Fun"
+author: "Jonathan Peake"
 format: html
 ---
 
@@ -26,34 +26,11 @@ You can add options to executable code like this
 The `echo: false` option disables the printing of code (only output is displayed).
 
 ```{r}
-#| label: simple-addition 
-#| eval: true
-#| echo: true
-
-#you can make a vertical line by doing shift and then press the \ key 
-# #| eval: false  = this disables printing of code. Only output is displayed. 
-# #| echo: false = this will remove code from being displayed and only show output 
-
-a <- 1+1
-a
-
-a <- 'this is a string in R'
-
-```
-
-You can use the \` on either side of text/numbers to indicate r code in line.
-
-The sum of 1+1 is `r 1+1`.
-
-The sum of 1+1 is `r 1+1`.
-
-You can output a line of text in quarto document like this:
-
-`r a`
-
-```{r}
-#| lable: fig-HR
-#| fig-cap: 'This is an example figure'
+#| message: false
+#| warning: false
+#| label: fig-condition
+#| fig-cap: 'Mean heartrate vs measurement in control and stress conditions'
+#| echo: false
 library(tidyverse)
 library(BayesFactor)
 
@@ -82,7 +59,7 @@ BF <- anovaBF(formula = HR ~ Measurement*Condition + VPN,
 #Evidence for interaction term
 BF_interaction <- BF[4]/BF[3]
 
-BF_interaction
+# BF_interaction
 
 #Summarize to mean / SEM for plot
 df_long2 <- df_long %>%
@@ -104,5 +81,9 @@ plot <- ggplot(df_long2, aes(Measurement, mean_value, group = Condition, color =
 #Print and save plots  
 plot
 
-#ggsave("../output/heartrate.pdf", plot, width = 4, height = 3)
+# ggsave("../output/heartrate.pdf", plot, width = 4, height = 3)
 ```
+
+This is a reference to @fig-condition
+
+!expr cap
